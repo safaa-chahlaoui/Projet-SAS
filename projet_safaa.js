@@ -264,4 +264,31 @@ console.log("Identifiant du trajet : "+trajetId);
   console.log(`Place : ${ticket.seatNumber}`);
   console.log(`Prix : ${ticket.price} DH`);
 }
+AcheterTicket();
+
+function afficherTicket(){
+    if(tickets.length===0){
+        console.log("Aucun ticket enregistré.");
+        return 
+    }
+    console.log("=== TICKETS ===");
+    for(let ticket of tickets){
+        let trajet=null;
+        for(let trip of trips){
+            if(trip.id===ticket.tripId){
+                trajet=trip;
+                break;
+            }
+        }
+        console.log(`Ticket #${ticket.id}`);
+        console.log(`Passager : ${ticket.passengerName}`);
+        console.log(`Trajet : ${trajet.departure} → ${trajet.destination}`);
+        console.log(`Place : ${ticket.seatNumber}`);
+        console.log(`Prix : ${ticket.price} DH`);
+        console.log(" ");
+        
+    }
+    
+}
+afficherTicket();
 
