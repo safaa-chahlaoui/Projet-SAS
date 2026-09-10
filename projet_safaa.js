@@ -328,6 +328,6 @@ function annulerTicket(trips, tickets, ticketId){
    console.log(" ");
    console.log("Ticket annulé avec succès.");
 }
-// annulerTicket(trips, tickets, ticketId);
-afficherMenu();
+annulerTicket(trips, tickets, ticketId);
+
 
