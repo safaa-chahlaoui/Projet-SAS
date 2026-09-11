@@ -199,11 +199,13 @@ console.log("0. Quitter");
 choix=Number(prompt("Votre choix : "));
 
     switch(choix){
-      case 1:afficherTrajet();break;
-      case 2:acheterTicket();break;
-      case 3:afficherTicket();break;
-      case 4:annulerTicket();break;
-      case 5:rechercherTicket();break;
+      case 1: afficherTrajet();break;
+      case 2: acheterTicket();break;
+      case 3: afficherTicket();break;
+      case 4: annulerTicket();break;
+      case 5: rechercherTicket();break;
+      case 6: filtrerTrajets();break;
+      case 7: trierTrajets();break;
       default:console.log("choix invalide.")
     }
 }
@@ -354,6 +356,21 @@ let findTicket= false;
     console.log(`Aucun ticket pour ${name}. `)
   }
 }
+
+function filtrerTrajets(){
+    let ville=prompt("Ville de départ : ");
+    let trajetsFiltrés=false;
+    for(let i=0; i<trips.length; i++){
+        if(trips[i].departure.toLowerCase().trim()===ville.toLowerCase().trim()){
+          console.log(`${trips[i].departure} -> ${trips[i].destination} : ${trips[i].price} DH`); 
+          trajetsFiltrés=true;
+        }
+    }
+     if(!trajetsFiltrés){
+         console.log("Aucun trajet trouvé au départ de cette ville")
+     }
+}
+
 afficherMenu();
 
 
