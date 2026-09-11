@@ -371,6 +371,19 @@ function filtrerTrajets(){
      }
 }
 
-afficherMenu();
-
-
+function trierTrajets(){
+    for(let i=0; i<trips.length-1; i++){
+        for(let j=0; j<trips.length-i-1; j++){
+            if(trips[j].price>trips[j+1].price){
+                let temp=trips[j];
+                trips[j]=trips[j+1];
+                trips[j+1]=temp;
+            }
+        }
+    }
+    for(let i=0; i<trips.length; i++){
+        console.log(`${trips[i].departure} -> ${trips[i].destination} : ${trips[i].price} DH`);
+    }
+}
+trierTrajets();
+        
