@@ -261,13 +261,7 @@ function acheterTicket(){
       tickets.push(ticket);
   }
      console.log("Ticket acheté avec succès.");
-//   console.log(" ");
-//   console.log(`Ticket #${ticket.id}`);
-//   console.log(`Passager : ${ticket.passengerName}`);
-//   console.log(`Trajet : ${ticket.tripId}`);
-//   console.log(`Place : ${ticket.seatNumber}`);
-//   console.log(`Prix : ${ticket.price} DH`);
-// 
+
 }
 
 function afficherTicket(){
