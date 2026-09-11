@@ -385,5 +385,6 @@ function trierTrajets(){
         console.log(`${trips[i].departure} -> ${trips[i].destination} : ${trips[i].price} DH`);
     }
 }
-trierTrajets();
+afficherMenu();
+
         
